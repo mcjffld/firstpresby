@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body  {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000066;
+}
+#container
+  {
+	width: 800px; 
+	background: #FFFFFF;
+	text-align: left;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+} 
+#sidebar
+  {
+	float: left;
+	width: 250px;
+	background-color: #FFFFFF;
+}
+#content
+  {
+	margin-top: 0px;
+	margin-right: 30px;
+	margin-left: 260px;
+	padding-top: 75px;
+	padding-bottom: 15px;
+	min-height:900px;
+
+} 
+#welcome
+  {
+	margin-top: 0px;
+	margin-right: 30px;
+	margin-left: 260px;
+	padding-top: 0px; !important
+	padding-bottom: 15px;
+
+} 
+
+#contentmain
+  {
+	margin-top: 0px;
+	margin-right: 30px;
+	margin-left: 260px;
+	padding-top: 0px;
+	padding-bottom: 15px;
+
+} 
+
+#footer {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	color: #FFFFFF;
+	background-color: #333333;
+	text-align: center;
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+#announcement-wrapper {
+	width:100%;
+	height:144px;
+	overflow:hidden;
+	margin-bottom:15px;
+	background-color:#a2c3ed;
+	border:solid 1px #184175;
+	}
+	
+#announcement {
+	width: 800px;
+	margin:0 auto;
+	}
+
+/* Miscellaneous classes for reuse */
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+.fltctr { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: none;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+h1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 36px;
+	margin-left: 8px;
+	margin-right: 20%;
+}
+h2 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 21px;
+	margin-left: 8px;
+	margin-bottom:-7px;
+}
+
+p {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: .9em;
+	line-height: 1.4em;
+	margin-right: 8%;
+	margin-left: 8px;
+	}
+
+li {font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+}
+
+hr {margin: 1.85em 0;}
