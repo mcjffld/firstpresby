@@ -6,6 +6,18 @@
 <table width="700" border="0" cellspacing="0" cellpadding="0">
   <tr class="style2">
     <td width="62" align="left" valign="top" class="style2" style="border-right:dotted 1px #333333">
+      <p>11/10/13 <br />
+	&nbsp;
+        </p>
+      <p>11/3/13 <br />
+	&nbsp;
+        </p>
+      <p>10/27/13 <br />
+	&nbsp;
+        </p>
+      <p>10/20/13 <br />
+	&nbsp;
+        </p>
       <p>10/13/13 <br />
 	&nbsp;
         </p>
@@ -100,6 +112,10 @@
       </p>
       <p>1/6/13</p></td>
     <td width="566" align="left" valign="top" class="style2">
+      <p><a href="../sermons/20131110_How_is_God_Real.mp3">How Is God Real?</a><br /><em>John 15:1-11</em></p>
+      <p><a href="../sermons/20131103_Never_Alone.mp3">Never Alone</a><br /><em>John 14:1-7</em></p>
+      <p>A Troubled Believer’s Trust<br /><em>John 11:21-27</em></p>
+      <p>To Subdue or to Renew (Dr. John Brown)</a><br /><em>Romans 12:1-18</em></p>
       <p><a href="../sermons/131013_whenthelord.mp3">When the Lord IS Your Shepherd</a><br /><em>John 10:11-15</em></p>
       <p><a href="../sermons/131006_thelightoftheworld.mp3">The Light of the World</a><br /><em>John 8:12-20</em></p>
       <p><a href="../sermons/20130929_Your_Deepest_Hunger.mp3">Your Deepest Hunger</a><br /><em>John 6:25-44</em></p>
