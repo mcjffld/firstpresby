@@ -86,8 +86,8 @@
 
   <li>Sermon Archives
 	<ol>
-		<li><a href="2013_sermons.php" target="_parent">2013 Sermons</a>
-		<li><a href="2012_sermons.php" target="_parent">2012 Sermons</a>
+    <li><a href="sermon-archive.php" target="_parent">2013 Sermons</a></li>
+    <li><a href="sermon-archive.php?year=2012" target="_parent">2012 Sermons</a></li>
 		<li><a href="2011_sermons.php" target="_parent">2011 Sermons</a>
 		<li><a href="2010_sermons.php" target="_parent">2010 Sermons</a>
 		<li><a href="2009_sermons.php" target="_parent">2009 Sermons</a>
