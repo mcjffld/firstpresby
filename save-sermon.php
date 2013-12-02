@@ -58,11 +58,21 @@
 
                 if (move_uploaded_file ($tmpname , "$sermondir/$filename" )) {
                     $my_file = 'sermon-list.txt';
-                    $filedata = file_get_contents($my_file);
-                    $handle = fopen($my_file,'w+') or die('Cannot open file:  '.$my_file);
+
                     $data = $date . "#" . $title . "#" . $scripture . "#" . $filename . "#" . $note . "\n";
-                    fwrite($handle, $data);
-                    fwrite($handle, $filedata);
+
+                    $lines = file($my_file);
+
+                    array_unshift($lines,$data);
+
+                    rsort($lines);
+
+                    file_put_contents($my_file, implode(PHP_EOL, $lines));
+
+#                    $filedata = file_get_contents($my_file);
+#                    $handle = fopen($my_file,'w+') or die('Cannot open file:  '.$my_file);
+#                    fwrite($handle, $data);
+#                    fwrite($handle, $filedata);
                     echo "saved file to " . $filename . " for " . $title . " from " . $date;
 
                 } else {
@@ -103,19 +113,38 @@
 
             $data = str_getcsv($str, "#");
 
-            if ($data[0] != NULL) { 
+            if (isset($data[0])) {
+                $date = $data[0];
 
-                if ($data[4] == NULL || $data[4] == "") {
-                    $data[4]  ="&nbsp;";
+                if (isset($data[1])) {
+                    $title = $data[1];
+                } else {
+                    $title = "&nbsp;";
                 }
+                if (isset($data[2])) {
+                    $scripture = $data[2];
+                } else {
+                    $scripture = "&nbsp;";
+                }
+                if (isset($data[3])) {
+                    $filename = $data[3];
+                } else {
+                    $filename = "&nbsp;";
+                }
+                if (isset($data[4])) {
+                    $note = $data[4];
+                } else {
+                    $note = "&nbsp;";
+                }
+
         ?>
 
 <tr>
-    <td><?= $data[0] ?></td>
-    <td><?= $data[1] ?></td>
-    <td><?= $data[2] ?></td>
-    <td><?= $data[3] ?></td>
-    <td><?= $data[4] ?></td>
+    <td><?= $date ?></td>
+    <td><?= $title ?></td>
+    <td><?= $scripture ?></td>
+    <td><?= $filename ?></td>
+    <td><?= $note ?></td>
 </tr>
 
         <?php

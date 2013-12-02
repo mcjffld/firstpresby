@@ -6,8 +6,17 @@
 <table width="700" border="0" cellspacing="0" cellpadding="0">
   <tr class="style2">
     <td width="62" align="left" valign="top" class="style2" style="border-right:dotted 1px #333333">
+      <p>12/01/13 <br />
+  &nbsp;
+        </p>
+      <p>11/24/13 <br />
+  &nbsp;
+        </p>
+      <p>11/17/13 <br />
+  &nbsp;
+        </p>
       <p>11/10/13 <br />
-	&nbsp;
+  &nbsp;
         </p>
       <p>11/3/13 <br />
 	&nbsp;
@@ -112,6 +121,9 @@
       </p>
       <p>1/6/13</p></td>
     <td width="566" align="left" valign="top" class="style2">
+      <p><a href="../sermons/20131201-sermon.mp3">Everyone Who Thirsts, Everyone Who Hungers</a><br /><em>Matthew 12:43-45</em></p>
+      <p>How Can We Give Thanks, Always?<br /><em>Ephesians 5:15-20</em></p>
+      <p>The Joy of Giving<br /><em>2 Corinthians 9:6-15</em></p>
       <p><a href="../sermons/20131110_How_is_God_Real.mp3">How Is God Real?</a><br /><em>John 15:1-11</em></p>
       <p><a href="../sermons/20131103_Never_Alone.mp3">Never Alone</a><br /><em>John 14:1-7</em></p>
       <p>A Troubled Believer’s Trust<br /><em>John 11:21-27</em></p>

@@ -89,6 +89,7 @@ while(!feof($file)) {
 } 
 
 fclose($file); 
+
 ?>                 
 			</table>
 
