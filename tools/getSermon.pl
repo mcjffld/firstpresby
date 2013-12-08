@@ -34,13 +34,13 @@ my $vlcCommand = qq{ -I dummy --no-sout-video --sout-audio --no-sout-rtp-sap --n
 
 print "Executing $vlc $vlcCommand";
 
-#print `$vlc $vlcCommand`;
+print `$vlc $vlcCommand`;
 
 print "\n\nDone getting file from CD\n\nOpening Audacity to edit audio ...\n\n";
 
 print "$audacity $target\n";
 
-#print `$audacity $target`;
+print `$audacity $target`;
 
 my $mp3file = $target;
 
