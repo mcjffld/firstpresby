@@ -1,10 +1,17 @@
 #!/usr/bin/perl
 
-my $vlc = qq{/Applications/VLC.app/Contents/MacOS/VLC};
+use Net::FTP;
 
-my $audacity = qq{/Applications/Audacity/Audacity.app/Contents/MacOS/Audacity};
 
-my $source = "cdda:///dev/rdisk1";
+my $vlc = qq{"C:/Program Files (x86)/VideoLAN/VLC/vlc"};
+
+my $audacity = qq{"C:/Program Files (x86)/Audacity/audacity"};
+
+my $source = "cdda:///d:/";
+
+my $tempDir = "/temp";
+
+chdir $tempDir;
 
 my $ONEDAY = 24 * 60 * 60;
 
@@ -15,8 +22,8 @@ $sermonTime += $ONEDAY;
 ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime($sermonTime);
 
 while($wday > 0) {
-	$sermonTime -= $ONEDAY;
-	($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime($sermonTime);
+        $sermonTime -= $ONEDAY;
+        ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime($sermonTime);
 }
 $mon++;
 $year+=1900;
@@ -27,7 +34,7 @@ my $vlcCommand = qq{ -I dummy --no-sout-video --sout-audio --no-sout-rtp-sap --n
 
 print "Executing $vlc $vlcCommand";
 
-#print `$vlc $vlcCommand`;
+print `$vlc $vlcCommand`;
 
 print "\n\nDone getting file from CD\n\nOpening Audacity to edit audio ...\n\n";
 
@@ -35,7 +42,36 @@ print "$audacity $target\n";
 
 print `$audacity $target`;
 
+my $mp3file = $target;
 
+$mp3file =~ tr/.wav/.mp3/;
 
+die "Can't find MP3 file: $mp3file" unless (-f $mp3file);
 
+my $host = "firstpresby.net";
 
+print "Connecting to $host ...\n";
+
+$ftp = Net::FTP->new("firstpresby.net", Debug => 0) or die "Cannot connect to some.host.name: $@";
+
+$ftp->login("firstpresby",'Duffy07') or die "Cannot login ", $ftp->message;
+
+$ftp->binary;
+
+$ftp->cwd("/sermons") or die "Cannot change working directory ", $ftp->message;
+
+print "Sending $mp3file to http://firstpresby.net/sermons/$mp3file ...\n";
+
+$ftp->hash(1,1024*1024);
+
+$ftp->put($mp3file) or die "get failed ", $ftp->message;
+
+$ftp->quit;
+
+print "Done\n\n";
+
+`"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" http://firstpresby.net/sermons/$mp3file`;
+
+print "Hit Enter to exit ...\n\n";
+
+<>;
