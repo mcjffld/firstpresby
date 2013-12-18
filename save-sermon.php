@@ -21,6 +21,8 @@
         if(isset($_REQUEST['scripture']) && $_REQUEST['scripture']!="")
         {
          $scripture=($_REQUEST['scripture']);
+        } else {
+            $scripture = "";
         }
         if(isset($_REQUEST['note']) && $_REQUEST['note']!="")
         {
@@ -28,72 +30,41 @@
         } else {
             $note = "";
         }
+        if(isset($_REQUEST['mp3file']) && $_REQUEST['mp3file']!="")
+        {
+         $mp3file=($_REQUEST['mp3file']);
+        } else {
+            $mp3file = "";
+        }
 
 
 
         if (isset($date) && isset($title)) {
-           $fnamedata = preg_replace("/(\d+)-(\d+)-(\d+)/", "$1$2$3_", $date);
+            $my_file = 'sermon-list.txt';
 
-            if ($_FILES["mp3file"]["error"] > 0)
-              {
-                  echo "Error: " . $_FILES["mp3file"]["error"] . "<br>";
-              }
-            else
-              {
-                  echo "Upload: " . $_FILES["mp3file"]["name"] . "<br>";
-                  echo "Type: " . $_FILES["mp3file"]["type"] . "<br>";
-                  echo "Size: " . ($_FILES["mp3file"]["size"] / 1024) . " kB<br>";
-                  echo "Stored in: " . $_FILES["mp3file"]["tmp_name"];
-              }
+            $data = $date . "#" . $title . "#" . $scripture . "#" . $mp3file . "#" . $note . "\n";
 
-            $filename = $_FILES['mp3file']['name'];
+            $lines = file($my_file);
 
-            $filename = $fnamedata . $filename;
+            array_unshift($lines,$data);
 
-            $tmpname = $_FILES['mp3file']['tmp_name'];
+            rsort($lines);
 
-            $error = $_FILES['mp3file']['error'];
+            file_put_contents($my_file, implode(PHP_EOL, $lines));
 
-            if (!$error) {
-
-                if (move_uploaded_file ($tmpname , "$sermondir/$filename" )) {
-                    $my_file = 'sermon-list.txt';
-
-                    $data = $date . "#" . $title . "#" . $scripture . "#" . $filename . "#" . $note . "\n";
-
-                    $lines = file($my_file);
-
-                    array_unshift($lines,$data);
-
-                    rsort($lines);
-
-                    file_put_contents($my_file, implode(PHP_EOL, $lines));
-
-#                    $filedata = file_get_contents($my_file);
-#                    $handle = fopen($my_file,'w+') or die('Cannot open file:  '.$my_file);
-#                    fwrite($handle, $data);
-#                    fwrite($handle, $filedata);
-                    echo "saved file to " . $filename . " for " . $title . " from " . $date;
-
-                } else {
-                    echo "Couldn't copy the file from " . $tmpname . " to " . $filename;
-                }
-            } else {
-                echo $error;
-            }
         } else {
 
             echo "no form data found";
         }
         ?>
 
-        <form action="save-sermon.php" enctype="multipart/form-data" method="POST">
+        <form action="save-sermon.php" method="POST">
         <table>
         <tr><th>Title</th><td><input type="text" name="title"/></td></tr>
         <tr><th>Scripture</th><td><input type="text" name="scripture"/></td></tr>
         <tr><th>Date</th><td><input type="date" name="date"/></td></tr>
         <tr><th>Note</th><td><input type="text" name="note"/></td></tr>
-        <tr><th>MP3</th><td><input type="file" name="mp3file" id="mp3file"/></td></tr>
+        <tr><th>MP3 Filename</th><td><input type="text" name="mp3file" id="mp3file"/></td></tr>
         <tr><th>&nbsp;</th><td><input type="submit"/></td></tr>
         </table>
         </form>

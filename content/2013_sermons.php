@@ -6,6 +6,13 @@
 <table width="700" border="0" cellspacing="0" cellpadding="0">
   <tr class="style2">
     <td width="62" align="left" valign="top" class="style2" style="border-right:dotted 1px #333333">
+      <p>12/15/13 <br />
+  &nbsp;
+        </p>
+      <p>12/08/13 <br />
+<br/>
+  &nbsp;
+        </p>
       <p>12/01/13 <br />
   &nbsp;
         </p>
@@ -121,6 +128,8 @@
       </p>
       <p>1/6/13</p></td>
     <td width="566" align="left" valign="top" class="style2">
+      <p><a href="../sermons/20131215-sermon.mp3">Desire, Despair and Delight</a><br /><em>Psalm 425</em></p>
+      <p>An Advent Calendar to Kingdom Come: <br/>Politics, Prayer and the Way of Mission (Rev. Donald Marsden)<br /><em>Romans 15:1-13</em></p>
       <p><a href="../sermons/20131201-sermon.mp3">Everyone Who Thirsts, Everyone Who Hungers</a><br /><em>Matthew 12:43-45</em></p>
       <p>How Can We Give Thanks, Always?<br /><em>Ephesians 5:15-20</em></p>
       <p>The Joy of Giving<br /><em>2 Corinthians 9:6-15</em></p>
