@@ -30,27 +30,30 @@
         } else {
             $note = "";
         }
-        if(isset($_REQUEST['mp3file']) && $_REQUEST['mp3file']!="")
+        if(isset($_REQUEST['filename']) && $_REQUEST['filename']!="")
         {
-         $mp3file=($_REQUEST['mp3file']);
+         $filename=($_REQUEST['filename']);
         } else {
-            $mp3file = "";
+            $filename = "";
         }
 
 
 
         if (isset($date) && isset($title)) {
-            $my_file = 'sermon-list.txt';
 
-            $data = $date . "#" . $title . "#" . $scripture . "#" . $mp3file . "#" . $note . "\n";
+            $con=mysqli_connect("sermonarchive.db.5959523.hostedresource.com","sermonarchive","Duffy2014!!","sermonarchive");
+            
+            if (mysqli_connect_errno()) {
+                echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            }
 
-            $lines = file($my_file);
+            $sql = "INSERT INTO sermon (sermon_date, title, scripture, filename, note) VALUES ('" . $date . "','" . $title . "','" . $scripture . "','" . $filename . "','" . $note . "')";
 
-            array_unshift($lines,$data);
+            echo $sql . "<p/>";
 
-            rsort($lines);
-
-            file_put_contents($my_file, implode(PHP_EOL, $lines));
+            if (!mysqli_query($con,$sql)) {
+                echo "Unable to save sermon data<p/>";
+            }
 
         } else {
 
@@ -64,7 +67,7 @@
         <tr><th>Scripture</th><td><input type="text" name="scripture"/></td></tr>
         <tr><th>Date</th><td><input type="date" name="date"/></td></tr>
         <tr><th>Note</th><td><input type="text" name="note"/></td></tr>
-        <tr><th>MP3 Filename</th><td><input type="text" name="mp3file" id="mp3file"/></td></tr>
+        <tr><th>MP3 Filename</th><td><input type="text" name="filename"/></td></tr>
         <tr><th>&nbsp;</th><td><input type="submit"/></td></tr>
         </table>
         </form>
@@ -76,53 +79,30 @@
                 <tr><th>Date</th><th>Title</th><th>Scripture</th><th>Filename</th><th>Note</th></tr>
         <?php
 
-        $file = fopen("sermon-list.txt", "r") or exit("Unable to open file!");
+        $con=mysqli_connect("sermonarchive.db.5959523.hostedresource.com","sermonarchive","Duffy2014!!","sermonarchive");
 
-        while(!feof($file)) {
+        if (mysqli_connect_errno())
+          {
+          echo "Failed to connect to MySQL: " . mysqli_connect_error();
+          }
 
-            $str = fgets($file);
+        $result = mysqli_query($con,"SELECT * FROM sermon");
 
-            $data = str_getcsv($str, "#");
 
-            if (isset($data[0])) {
-                $date = $data[0];
+        while($row = mysqli_fetch_array($result))
+          {
+          echo "<tr>";
+          echo "<td>" . $row['sermon_date'];
+          echo "<td>" . $row['title'];
+          echo "<td>" . $row['scripture'];
+          echo "<td>" . $row['filename'];
+          echo "<td>" . $row['note'];
+          echo "<tr>";
+          }
 
-                if (isset($data[1])) {
-                    $title = $data[1];
-                } else {
-                    $title = "&nbsp;";
-                }
-                if (isset($data[2])) {
-                    $scripture = $data[2];
-                } else {
-                    $scripture = "&nbsp;";
-                }
-                if (isset($data[3])) {
-                    $filename = $data[3];
-                } else {
-                    $filename = "&nbsp;";
-                }
-                if (isset($data[4])) {
-                    $note = $data[4];
-                } else {
-                    $note = "&nbsp;";
-                }
+        mysqli_close($con);
 
-        ?>
 
-<tr>
-    <td><?= $date ?></td>
-    <td><?= $title ?></td>
-    <td><?= $scripture ?></td>
-    <td><?= $filename ?></td>
-    <td><?= $note ?></td>
-</tr>
-
-        <?php
-
-            }
-        }
-        fclose($file);
         ?>
 
 

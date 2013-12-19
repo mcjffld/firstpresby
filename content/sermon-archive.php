@@ -32,6 +32,10 @@ li .sermon {
 	font-size: .9em;
 	font-style: italic;
 }
+.sermon .note {
+	font-size: .75em;
+	font-style: italic;
+}
 
 .sermon .date {
 font-size: .9em;
@@ -53,20 +57,29 @@ font-size: .9em;
 
 <?php
 
-$file = fopen("sermon-list.txt", "r") or exit("Unable to open file!");
 
-while(!feof($file)) {
 
-	$str = fgets($file);
 
-	$data = str_getcsv($str, "#");
+$con=mysqli_connect("sermonarchive.db.5959523.hostedresource.com","sermonarchive","Duffy2014!!","sermonarchive");
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
 
-	if ($data[0] != NULL) { 
-		$date = $data[0]; 
-		$title = $data[1]; 
-		$scripture = $data[2]; 
-		$filename = $data[3]; 
-		$note = $data[4];
+$result = mysqli_query($con,"SELECT * FROM  sermon order by sermon_date desc");
+
+while($row = mysqli_fetch_array($result)) {
+		$date = $row['sermon_date']; 
+		$date = mysqli_real_escape_string($con, $date);
+		$title = $row['title']; 
+		$title = mysqli_real_escape_string($con, $title);
+		$scripture = $row['scripture']; 
+		$scripture = mysqli_real_escape_string($con, $scripture);
+		$filename = $row['filename']; 
+		$filename = mysqli_real_escape_string($con, $filename);
+		$note = $row['note'];
+		$note = mysqli_real_escape_string($con, $note);
 
 		$pattern = "/^" . $year . ".*/";
 
@@ -78,17 +91,18 @@ while(!feof($file)) {
 	            <tr class="sermon"><td class="sermon date"><?= $date?></td> 
 	            	<td class="sermon details">
 	            	<span class="sermon link">
-	            		<a href="/sermons/<?= $filename?>"><?=$title?></a> 
-	            		<?= $note?></span>           <br/>          
-	            	<span class="sermon scripture"><?=$scripture ?></span>
+	            		<a href="<?= $filename?>"><?=$title?></a> 
+	            	</span>           <br/>          
+	            	<span class="sermon scripture"><?=$scripture ?></span><br/>
+            		<span style="sermon note"><?= $note?></span>
 	            </td>
 				</tr>
 <?php
 		}
-    } 
 } 
 
-fclose($file); 
+mysqli_close($con);
+
 
 ?>                 
 			</table>
