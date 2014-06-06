@@ -16,6 +16,6 @@ Fax: (203) 374-1643</p>
   Communion: 1st Sunday of the month<br />
   Prayer Line: (203) 374-0846</p>
 
-<p><font size="-1">Last Updated 11/11/13</font></p>
+<p><font size="-1">Last Updated 4/12/14</font></p>
 </div>
 </div>

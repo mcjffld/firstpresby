@@ -33,14 +33,7 @@
 <hr />
 <h2><a name="covenant" target="_parent"></a>Covenant to Care</h2>
 <p>The congregation has entered into a covenant to provide assistance and support to specifically assigned individuals who are in the care of the State of Connecticut, Department of Social Services. Our church family has committed to accept the responsibility for 17 families. The Thanksgiving and Christmas drives for non-perishable food and gifts were overwhelmed by the support of First Presby.</p>
-<blockquote>
-  <p><strong>CHRISTMAS FOOD DRIVE </strong></p>
-  <p>At the end of this year, let us be thankful for all the blessings we receive from God!  In this spirit, we will be doing a Christmas food basket for 10 families under the Covenant to Care for Children. </p>
-  <p><strong>Items needed are: </strong><br />
-  Canned Hams, all kinds of non perishable foods – vegetables and fruits, rice, pasta-  and let’s not forget special children’s treats. </p>
-  <p>Our baskets of love will be picked up on Sunday December 21st, so let us be generous and provide these 10 families with a good Christmas supper. During the week, you may deposit food items in blue baskets by the front office, on Sundays these baskets will be in the Narthex and Brooks Hall. </p>
-  <p>For further information, please contact any member of the Mission Committee.</p>
-</blockquote>
+
 <p> <a href="#top" target="_parent">back to top</a></p>
 <hr />
 <h2><a name="boyscout" target="_parent"></a>Boy Scout Troop 10</h2>

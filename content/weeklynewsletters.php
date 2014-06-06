@@ -3,42 +3,36 @@
 <p>These  are the page of announcements that are inserted in our church bulletins every week. We hope you will keep up with our activities and opportunities to spend time withour church family! Weekly newsletters are available for download as PDFs.</p>
 
 <p>
-<a href="../weeklynewsletters/131110.pdf" target="_blank">November 10, 2013</a><br />
-<a href="../weeklynewsletters/131103.pdf" target="_blank">November 3, 2013</a><br />
+<a href="../weeklynewsletters/140223.pdf" target="_blank">February 23, 2014</a><br />
+<a href="../weeklynewsletters/140216.pdf" target="_blank">February 16, 2014</a><br />
+<a href="../weeklynewsletters/140209.pdf" target="_blank">February 9, 2014</a><br />
+<a href="../weeklynewsletters/140202.pdf" target="_blank">February 2, 2014</a><br />
+<a href="../weeklynewsletters/140126.pdf" target="_blank">January 26, 2014</a><br />
+<a href="../weeklynewsletters/140119.pdf" target="_blank">January 19, 2014</a><br />
 </p>
 
 
-<p>
+<!-- p>
+<a href="../weeklynewsletters/131208.pdf" target="_blank">December 8, 2013</a><br />
+<a href="../weeklynewsletters/131110.pdf" target="_blank">November 10, 2013</a><br />
+<a href="../weeklynewsletters/131103.pdf" target="_blank">November 3, 2013</a><br />
 <a href="../weeklynewsletters/131027.pdf" target="_blank">October 27, 2013</a><br />
 <a href="../weeklynewsletters/131020.pdf" target="_blank">October 20, 2013</a><br />
 <a href="../weeklynewsletters/131013.pdf" target="_blank">October 13, 2013</a><br />
 <a href="../weeklynewsletters/131006.pdf" target="_blank">October 6, 2013</a><br />
-</p>
-
-<p>
 <a href="../weeklynewsletters/130707.pdf" target="_blank">July 7, 2013</a><br />
-</p>
-<p>
 <a href="../weeklynewsletters/130630.pdf" target="_blank">June 30, 2013</a><br />
-</p>
-<p>
 <a href="../weeklynewsletters/130421.pdf" target="_blank">April 21, 2013</a><br />
 <a href="../weeklynewsletters/130407.pdf" target="_blank">April 7, 2013</a><br />
-</p>
-<p>
 <a href="../weeklynewsletters/130331.pdf" target="_blank">March 31, 2013</a><br />
 <a href="../weeklynewsletters/130324.pdf" target="_blank">March 24, 2013</a><br />
 <a href="../weeklynewsletters/130317.pdf" target="_blank">March 17, 2013</a><br />
 <a href="../weeklynewsletters/130310.pdf" target="_blank">March 10, 2013</a><br />
 <a href="../weeklynewsletters/130303.pdf" target="_blank">March 3, 2013</a><br />
-</p>
-<p>
 <a href="../weeklynewsletters/130224.pdf" target="_blank">February 24, 2013</a><br />
 <a href="../weeklynewsletters/130217.pdf" target="_blank">February 17, 2013</a><br />
 <a href="../weeklynewsletters/130210.pdf" target="_blank">February 10, 2013</a><br />
 <a href="../weeklynewsletters/130203.pdf" target="_blank">February 3, 2013</a><br />
-</p>
-<p>
 <a href="../weeklynewsletters/130127.pdf" target="_blank">January 27, 2013</a><br />
 <a href="../weeklynewsletters/130120.pdf" target="_blank">January 20, 2013</a><br />
 <a href="../weeklynewsletters/130113.pdf" target="_blank">January 13, 2013</a><br />

@@ -91,7 +91,13 @@ while($row = mysqli_fetch_array($result)) {
 	            <tr class="sermon"><td class="sermon date"><?= $date?></td> 
 	            	<td class="sermon details">
 	            	<span class="sermon link">
-	            		<a href="<?= $filename?>"><?=$title?></a> 
+	            		<?php if ($filename) {?>
+	            		<a href="<?= $filename?>">	
+	            		<?php } ?>
+	            		<?=$title?>
+	            		<?php if ($filename) {?>
+		            	</a> 
+	            		<?php } ?>
 	            	</span>           <br/>          
 	            	<span class="sermon scripture"><?=$scripture ?></span><br/>
             		<span style="sermon note"><?= $note?></span>

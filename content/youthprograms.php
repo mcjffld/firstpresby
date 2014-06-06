@@ -13,7 +13,7 @@
 <p><strong>Retreats<br />
 </strong>We understand that students have busy lives with academics, sports, clubs etc. and we offer them a chance to get away from the daily stresses. Whether it’s a weekend in the fall or a longer trip during vacation we encourage students to join us as we get away and relax.</p>
 <p><strong>Confirmation Class</strong></p>
-<p><img src="../images/youth_confirmation_02.jpg" width="400" height="270" /></p>
+<p><img src="../images/confirmation_2014.jpg" /></p>
 <p>This 10-week confirmation class is open to those in 8th and 9th grades for the purposes of deepening their Biblical understanding and preparing them for church membership. The class begins in the fall and meets on scheduled Sundays. This is an important class for young people for their faith development and spiritual growth. The students will have an opportunity to meet with the members of the Session prior to the Confirmation date, which is traditionally on Palm Sunday.  Contact the church office if you are interested in the next class.</p>
   </div>
     </div>
