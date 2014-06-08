@@ -6,6 +6,8 @@
         <div>
 
 
+        <h2>Sermon Archive Data</h2>
+
         <?php
 
         $sermondir = "/tmp/sermons";
@@ -54,7 +56,7 @@
         }
 
 
-       if (isset($action) && $action === 'delete' && isset($date)) {
+       if (isset($action) && $action === 'Delete' && isset($date)) {
 
             $con=mysqli_connect("sermonarchive.db.5959523.hostedresource.com","sermonarchive","Duffy2014!!","sermonarchive");
             
@@ -79,34 +81,31 @@
 
             $sql = "REPLACE INTO sermon (sermon_date, title, scripture, filename, note) VALUES ('" . $date . "','" . $title . "','" . $scripture . "','" . $filename . "','" . $note . "')";
 
-            echo $sql . "<p/>";
+            echo "<!-- " . $sql . "-->";
 
             if (!mysqli_query($con,$sql)) {
                 echo "Unable to save sermon data<p/>";
             }
 
-        } else {
-
-            echo "no form data found";
         }
         ?>
-
-        <form action="save-sermon.php" method="POST">
-        <table>
-        <tr><th>Title</th><td><input type="text" name="title"/></td></tr>
-        <tr><th>Scripture</th><td><input type="text" name="scripture"/></td></tr>
-        <tr><th>Date</th><td><input type="date" name="date"/></td></tr>
-        <tr><th>Note</th><td><input type="text" name="note"/></td></tr>
-        <tr><th>MP3 Filename</th><td><input type="text" name="filename"/></td></tr>
-        <tr><th>&nbsp;</th><td><input type="submit"/></td></tr>
-        </table>
-        </form>
 
         </div>
 
 
             <table border="1">
-                <tr><th>Date</th><th>Title</th><th>Scripture</th><th>Filename</th><th>Note</th><th><th>Delete</tr>
+                <tr><th>Date</th><th>Title</th><th>Scripture</th><th>Filename</th><th>Note</th><th colspan="2">Action</tr>
+
+                <tr><form method=\"post\" action="save-sermon.php">
+          <td><input type="date" name="date" >
+          <td><input type="text" name="title" size="60" >
+          <td><input type="text" name="scripture" >
+          <td><input type="text" name="filename" size="40" >
+          <td><input type="text" name="note" >
+          <td colspan="2" align="center"><input type="submit" value="Add"/>
+          
+          </form>
+          <tr>
         <?php
 
         $con=mysqli_connect("sermonarchive.db.5959523.hostedresource.com","sermonarchive","Duffy2014!!","sermonarchive");
@@ -126,10 +125,10 @@
           <td><input type="text" name="date" value="<?php echo $row['sermon_date'];?>">
           <td><input type="text" name="title" size="60" value="<?php echo $row['title'];?>">
           <td><input type="text" name="scripture" value="<?php echo $row['scripture'];?>">
-          <td><input type="text" name="filename" value="<?php echo $row['filename'];?>">
+          <td><input type="text" name="filename" size="40" value="<?php echo $row['filename'];?>">
           <td><input type="text" name="note" value="<?php echo $row['note'];?>">
           <td><input type="submit" value="Update"/>
-          <td><input type="checkbox" name="action" value="delete">
+          <td><input type="submit" name="action" value="Delete">
           </form>
           <tr>
           <?
